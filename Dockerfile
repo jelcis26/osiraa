@@ -5,5 +5,5 @@ COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 COPY drp_aa_mvp/ /code
 WORKDIR /code
-CMD "/entrypoint.sh"
+CMD sh -c "sh /entrypoint.sh"
 EXPOSE 8000:8000
